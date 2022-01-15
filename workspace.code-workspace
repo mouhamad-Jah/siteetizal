@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\PYTHON\\html"
+		},
+		{
+			"path": "..\\..\\PYTHON"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "html",
+		"svn.ignoreMissingSvnWarning": true
+	}
+}
