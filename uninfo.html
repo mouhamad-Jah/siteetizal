@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="AR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=0.1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' 
+    rel='stylesheet' />
+     <link rel="stylesheet" 
+     href="style.css">
+ <title>مشروع التخرج</title>
+</head>
+<body style="background-color: #ffe0b2;">
+    <!--Navbar-->
+    <nav class="navbar navbar navbar-expand-lg navbar-dark py-0 fixed-top" style="background-color: #a5682a;">
+        <div class="container">
+        <a href="#" class=" bnt-1 navbar-brand" style="color: yellow; font-size: 30px;" >
+           <span  style="font-size: 40px; color:maroon; font-size:larger; font-weight: bold;">
+            اتصال  القاسمية   </span> </a>
+        <button class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navmenu"
+        >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <form class="btn-10 d-flex style" >
+      <input class=" form-control me-2" type="Recherche" style="text-align: right;" placeholder="ابحث" 
+      aria-label="Recherche">
+      <button class="btn btn-outline-success bg-warning bg-white" type="submit">البحث</button>
+    </form>
+        <div class="collapse navbar-collapse" style="margin-left: 1px;" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="btn-14 nav-item">
+                <a class="nav-link  text-dark bi bi-house text-dark mx-1" style="border-style: outset; border-color: white; font-size:large" 
+                data-bs-toggle="active" href="index.html" role="button" aria-expanded="false"></a>
+              </li>
+              <li class="btn-14 nav-item">
+                <a class="nav-link  text-dark bi bi-tv text-dark mx-1" style="border-style: outset; border-color: white; font-size:large" 
+                data-bs-toggle="active" href="tv.html" role="button" aria-expanded="false">TV</a>
+              </li>
+              <li class="btn-14 nav-item">
+                <a class="nav-link  text-dark bi bi-ui-radios text-dark mx-1" style="border-style: outset; border-color: white; font-size:large" 
+                data-bs-toggle="active" href="radio.html" role="button" aria-expanded="false">FM</a>
+              </li>
+              <li class="btn-15 nav-item dropdown">
+                <a class="nav-link  text-dark" style="border-style: outset; border-color: white; font-size:large" 
+                data-bs-toggle="drop" href="atelier.html" role="button" aria-expanded="false">الدورات </a>
+              </li> 
+                <li class="btn-14 nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle text-dark" style="border-style: outset; border-color: white; font-size:large" 
+                  data-bs-toggle="dropdown" href="activity.html" role="button" aria-expanded="false">الاخبار</a>
+                  <ul class="dropdown-menu" style="text-align: right;">
+                    <li><a class="dropdown-item" href="uninfo.html">اخبار الجامعة</a></li>
+                    <li><a class="dropdown-item" href="colleginf.html">اخبار الكلية</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                  </ul>
+                </li>
+                <li class=" btn-14 nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-dark" id="#" style="border-style: outset; border-color: white; font-size:large" 
+                  data-bs-toggle="dropdown" href="#activity.html" role="button" aria-expanded="false">الملتقى الاعلامي</a>
+                  <ul class="dropdown-menu" style="text-align: right;">
+                    <li><a class="dropdown-item" href="activity.html"> 2019 </a></li>
+                    <li><a class="dropdown-item" href="culture.html">2020 </a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item " href="indep.html">2021</a></li>
+                  </ul>
+                </li>
+                <li class="btn-14">
+                  <a class="nav-link  text-dark nav-link  text-dark bi bi-people text-dark mx-1" style="border-style: outset; border-color: white; font-size:large" 
+                  data-bs-toggle="active" href="about.html" role="button" aria-expanded="false"></a>
+                </li>
+            </ul>
+<button class="btn-2 nav-link   text-dark bi bi-box-arrow-in-right  mx-1" 
+style="border-style: outset; margin-left: 40px; margin-right: 1px;  border-color: white; font-size: larger;" data-bs-toggle="modal" 
+              data-bs-target="#INS"></button>
+        </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+<!-- Learn Sections -->
+
+
+<!--INSCIVEZ-VOUS-->
+<div class="modal fade" id="INS" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-right">
+        <h5 class="modal-title text-right" style="text-align: right;" id="exampleModalLabel">التسجل</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="text-align: right;">
+          <p class="lead"> </p>
+          <form>
+              <div class="mb-3" style="text-align: right;">
+                  <label for="first-name" class="col-form-label">
+                   الاسم
+                  </label>
+                  <input type="text" class="form-control" id="first-name"
+                  >
+              </div>
+
+              <div class="mb-3 text-right">
+                  <label for="first-name" class="col-form-label" style="text-align: right;">
+                      اللقب
+                  </label>
+                  <input type="text" class="form-control" id="first-name"
+                  >
+              </div>
+              <div class="mb-3">
+                  <label for="first-name" class="col-form-label">
+                    <div style="text-align: right;"> الايميل</div>
+                  </label>
+                  <input type="text" class="form-control" id="first-name"
+                  >
+              </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            
+          اغلق
+
+        </button>
+        <button type="button" 
+        class="btn btn-primary">سجل</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div style="margin-right: 50px; margin-left: 50px;">
+  <div class="card-group">
+    <div class="card" style="text-align: right;">
+      <img src="img/police.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a href="police.html" style="text-decoration-line: none;"><h5 class="card-title text-dark">
+          الجامعة القاسمية وأكاديمية العلوم الشرطية بالشارقة يوقعان مذكرة تفاهم 
+               </h5>
+        <p class="card-text text-dark">
+          وقعت الجامعة القاسمية مذكرة تفاهم مع أكاديمية العلوم الشرطية بالشارقة بهدف توطيد وتعزيز التعاون وخدمة الأهداف المشتركة في مجالات التدريب والبحوث والدراسات الأكاديمية.
+        </p>
+      </a>
+      </div>
+     <a href="police.html" style="text-decoration-line: none; text-decoration-color: black;" class="text-dark"> <div class="btn-7" style="background-color: #a5682a;">
+        <small  style="text-decoration-color: black; font-size: x-large; text-decoration-color: black;" class="text-dark">اقرأ المزيد</small>
+      </div>
+    </a>
+    </div>
+    <div class="card" style="text-align: right;">
+      <img src="img/sheikh-zayed.jpg" style="height: 280px;" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a href="zayed.html" style="text-decoration-line: none;"><h5 class="card-title text-dark">
+          عواد الخلف بصمات زايد طيب الله ثراه أيقونة خالدة للعمل الخيري
+        </h5>
+        <p class="card-text text-dark">
+          أكد الأستاذ الدكتور عواد الخلف مدير الجامعة القاسمية بأن المغفور له الشيخ زايد بن سلطان آل نهيان طيب الله ثراه مؤسس الدولة تمكن من بناء وطن تسوده قيم الإنسانية والتسامح والتكافل وقبول الآخر
+        </p>
+      </a>
+      </div>
+      <a href="zayed.html" 
+      style="text-decoration-line: none; text-decoration-color: black;" 
+      class="text-dark"> <div class="btn-7" 
+      style="background-color: #a5682a;">
+        <small  style="text-decoration-color: black; font-size: x-large; text-decoration-color: black;" 
+        class="text-dark">اقرأ المزيد</small>
+      </div>
+    </a>
+    </div>
+    <div class="card" style="text-align: right;">
+      <img src="img/majlis-main.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a href="majlis.html" style="text-decoration-line: none;"><h5 class="card-title text-dark" >
+          المجلس الرمضاني للجامعة القاسمية يلقي الضوء على مستقبل التعلم الذكي
+        </h5>
+        <p class="card-text">
+          سلط المجلس الرمضاني السادس للجامعة القاسمية الضوء على مستقبل التعلم الذكي وطرق تعلمه ومنهجيته التدريسية وذلك خلال استضافة سعادة الدكتور منصور محمد العور رئيس جامعة حمدان بن محمد الذكية .
+        </p>
+      </a>
+      </div>
+      <a href="majlis.html" style="text-decoration-line: none; text-decoration-color: black;" class="text-dark"> <div class="btn-7" style="background-color: #a5682a;">
+        <small  style="text-decoration-color: black; font-size: x-large; text-decoration-color: black;" class="text-dark">اقرأ المزيد</small>
+      </div>
+    </a>
+    </div>
+  </div>
+</div>
+<div class="container" style="background-color: #ffe0b2;">
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card mb-3" id="4444">
+          <img src="img/cult.png" class="card-img-top" alt="...." >
+          <figcaption style="text-align: center; font-style: normal;">مهرجان القاسمية للثقافات - أرشيفية          </figcaption>
+          <div class="card-body">
+            <h1 class="card-title " style="text-align: center;">"في قلوب العالم يا زايد" شعار مهرجان القاسمية للثقافات بالشارقة 12/فبراير/2019</h1>
+            <p class="card-text">
+              <p class="card-text text-right" style="text-align: right;"><small class="text-muted text-right">  8:44:14| الناشر : محمد جاه جوب |  19/ مارس /2022م</small></p>
+              <hr>
+              <p class="card-text" style="text-align: right;"><small class="text-muted"> </small> 
+                <p style="text-align: right;">تستعد الجامعة القاسمية في الشارقة لإطلاق الدورة الثانية من مهرجان القاسمية للثقافات الذي سينطلق في فبراير المقبل تحت شعار "في قلوب العالم يا زايد" .</p>
+                <p style="text-align: right;">وبدأت عمادة شؤون الطالبات في الجامعة دعوة طلبة الجامعة من البنين والبنات والذين ينتمون إلى أكثر من 60 دولة للمشاركة في المهرجان والتفاعل مع أحداثه التي تتواكب مع "عام زايد" لتعبر عن روح مؤسس الإمارات وما قام به من إنجازات ومشاريع في مختلف أقطار العالم.</p>
+                <p style="text-align: right;">وأكد الأستاذ الدكتور رشاد سالم مدير الجامعة القاسمية أنه وفي إطار احتفالات الإمارات بعام 2018 ليكون عام زايد؛ سينطلق مهرجان الجامعة القاسمية للثقافات ليعمل طلبة الجامعة خلال المهرجان على إبراز الإنجازات التي حققها المغفور له الشيخ زايد بن سلطان آل نهيان في أوطانهم.</p>
+                <p style="text-align: right;">وأوضح أن المهرجان سيضم عددا من الفقرات الرئيسية على المسرح الخارجي بمشاركة كل الدول المشاركة.. مشيرا إلى أن الركن المميز لهذا العام سيكون لدولة الامارات من أجل إبراز إنجازاتها وتطورها وتاريخها وتراثها وعاداتها وتقاليدها لتعريف طلبة العالم بتاريخ الدولة وتطورها.
+                </p>
+                </p>
+                <div>
+                  <img src="img/rowan.jpg" class="card-img-top" alt="...." >
+          <figcaption style="text-align: center; font-style: normal;">جناح دولة رواندا</figcaption>
+                </div>
+                                
+            <p class="card-text" style="text-align: right;"><small class="text-muted">آخر تحديث  3 قائق</small></p>
+          </div>
+      </div>
+            <!--Fin Modifier Article-->
+    </div>
+    <div class="col-6 col-md-4">
+     
+          </li>
+        </ul>
+      </nav>
+      <div class="card" style="width: 23rem; height: 35rem;" id="carte-1">
+        <img src="img/national.jpg" class="card-img-top" width="100" height="150" alt="">
+        <figcaption style="text-align: center; font-style: normal;">الجامعة القاسمية تحتفي باليوم الوطني الخمسين للدولة
+        </figcaption>
+        <div class="card-body" style="text-align:right;">
+          <h5 class="card-title">الشارقة في 26 نوفمبر/ وام / نظمت الجامعة القاسمية ضمن احتفالاتها باليوم الوطني الخمسين للدولة لقاء شعريا وفنيا تغنى بأمجاد الاتحاد وإنجازاته.</h5>
+          <p class="card-text"><small class="text-muted"> الناشر :محمد جاه جوب , 23 / يناير/ | 2022م</small></p>
+          <p class="card-text">حضر اللقاء على مسرح الجامعة سعادة الدكتور عواد الخلف القائم بأعمال مدير الجامعة القاسمية ونواب مدير الجامعة والعمداء ومديري المراكز وأعضاء الهيئتين الأكاديمية والإدارية.
+</p>
+             <p class="card-text"><small class="text-muted">آخر تحديث شهر واحد</small></p>
+          <a href="national.html" class="btn btn-primary">اقرأ المزيد</a>
+          <hr>
+        </div>
+      </div>
+      <div class="card" style="width: 23rem; height: 60rem;" id="carte-2">
+        <img src="img/art.jpg" class="card-img-top" width="100" height="100" alt="...">
+        <figcaption style="text-align: center;">ورشة أقيمت بعنوان الإيقاع المنتظم</figcaption>
+        <div class="card-body" style="text-align: right;">
+          <h5 class="card-title" style="text-align:right;">طالبات القاسمية يقدمن أعمالاً فنية رائعة بمهرجان الفنون الإسلامية
+            </h5>
+            <p class="card-text"><small class="text-muted"> الناشر :محمد جاه جوب , 23 / يناير/ | 2022م</small></p>
+          <p class="card-text" style="text-align: right; font-size: large;"> 
+            قدمت طالبات الجامعة القاسمية أعمالاً فنية رائعةضمن مشاركتهن في مهرجان الشارقة الدولي للفنون الإسلامية، من خلال ورشة أُقيمت بعنوان "الإيقاع المنتظم"، حيث استفدن من محاورها في صقل قدراتهن الفنية.
+            الشارقة 24:</p>
+             <p class="card-text"><small class="text-muted">آخر تحديث اسبوع</small></p>
+          <a href="#dawru" class="btn btn-primary">اقرا المزيد</a>
+          <br>
+          <br>
+          <hr>
+
+
+          <img src="img/national.jpg" class="card-img-top" width="100" height="150" alt="">
+          <figcaption style="text-align: center; font-style: normal;">الجامعة القاسمية تحتفي باليوم الوطني الخمسين للدولة
+          </figcaption>
+          <div class="card-body" style="text-align:right;">
+            <h5 class="card-title">الشارقة في 26 نوفمبر/ وام / نظمت الجامعة القاسمية ضمن احتفالاتها باليوم الوطني الخمسين للدولة لقاء شعريا وفنيا تغنى بأمجاد الاتحاد وإنجازاته.</h5>
+            <p class="card-text"><small class="text-muted"> الناشر :محمد جاه جوب , 23 / يناير/ | 2022م</small></p>
+            <p class="card-text">
+   </p>
+            <a href="#" class="btn btn-primary">اقرأ المزيد</a>
+          </div>
+
+
+
+        </div>
+      </div>
+       <br>
+       
+
+      
+
+
+    </div>
+  </div>
+</div> 
+
+<!--FIN-->
+
+
+
+
+
+<link rel="stylesheet" href="style.css">
+
+<!-- *******************   -->
+<!--  This Code is for only the floating card in right bottom corner -->
+<!-- ********************  -->
+
+  <script src="main.js"></script>
+</div>
+
+<section id="Learn" class="p-5">
+  <div class="container">
+      <div class="row align-items-center justify-content-between">
+         <div class="col-md">
+         </div>
+      </div>
+  </div>
+</section>
+<!--INSCIVEZ-VOUS-->
+<div class="modal fade" id="INS" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header text-right">
+      <h5 class="modal-title text-right" style="text-align: right;" id="exampleModalLabel">التسجل</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body" style="text-align: right;">
+        <p class="lead"> </p>
+        <form>
+            <div class="mb-3" style="text-align: right;">
+                <label for="first-name" class="col-form-label">
+                 الاسم
+                </label>
+                <input type="text" class="form-control" id="first-name"
+                >
+            </div>
+
+            <div class="mb-3 text-right">
+                <label for="first-name" class="col-form-label" style="text-align: right;">
+                    اللقب
+                </label>
+                <input type="text" class="form-control" id="first-name"
+                >
+            </div>
+            <div class="mb-3">
+                <label for="first-name" class="col-form-label">
+                  <div style="text-align: right;"> الايميل</div>
+                </label>
+                <input type="text" class="form-control" id="first-name"
+                >
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          
+        اغلق
+
+      </button>
+      <button type="button" 
+      class="btn btn-primary">سجل</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!--FIN-->
+<!--  Question Accordian  -->
+
+
+
+
+<!--Fin de la barre de navigation-->
+<br/>
+<!--partie principales-->
+
+<!--fin de la partie principale-->
+
+<!-- Contact & Map -->
+
+<section class="p-5" style="background: #a5682a; ">
+<div class="container">
+    <div class="row g-4">
+        <div class="col-md">
+            <h2 class="text-center mb-4" style="text-align: center;" id="equipe">تواصل معنا</h2>
+          <ul class="list-group list-group-flush lead">
+            
+              <li class="List-group-Item" >
+
+                <a ><i class="bi bi-telephone text-dark mx-1">+971 544 78 24 34</i></a>
+            </li>
+              <li class="List-group-Item">
+                <a><i class="bi bi-telephone text-dark mx-1">+971 544 78 24 34</i></a>
+            </li>
+              <li class="List-group-Item">
+                <a ><i class="bi bi-telephone text-dark mx-1">+971 544 78 24 34</i></a>
+              </li>
+              <li class="List-group-Item">
+                <a href="#"><i class="bi bi-envelope text-dark mx-1">mm8970dd@gmail.com</i></a> 
+              </li>
+              <li class="List-group-Item" id="">
+                <a href="#"><i class="bi bi-envelope text-dark mx-1">mm8970dd@gmail.com</i></a> 
+              </li> 
+              <li class="List-group-Item" id="">
+                <a ><i class="bi bi-geo-alt-fill text-dark mx-1" style="font-style: normal;"> الإمارات العربية المتحدة – الشارقة – مويلح – المدينة الجامعية</i></a> 
+              </li>
+              
+          </ul>
+        </div>
+
+        <div class="col-md">
+           <div id="map"> </div>
+           <li class="list-group-item">
+            <span class="fw-bold" style="text-align: center;">موقع الجامعة القاسمية</span> مويلح /المدينة الجامعية
+        </li>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5083.710010637612!2d55.462626883414664!3d25.29727393672443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f0e6f123a3d%3A0xdec6b7d5d4475bc1!2sAl%20Qasimia%20University!5e0!3m2!1sen!2sae!4v1649187574611!5m2!1sen!2sae"
+            width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- footer -->
+<footer class="p-3 bg-dark text-white text-center position-relative" >
+<div class="container">
+    <p class="lead">copyright &copy; 2022 كلية الاتصال بالجامعة القاسمية</p>
+    <a href="#" class="position-absolute  bottom-0 end-0 p-5">
+        <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+</div>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Création d'article</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          
+        Fermer
+
+      </button>
+      <button type="button" 
+      class="btn btn-primary">Soumettre</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<script
+
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+  <SCRIPt>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiamFoNDQiLCJhIjoiY2t5OWR3Z3hpMDVpdDJ2bWZ3bHhobXJkMiJ9.TkuO6DhEWWlCkTHTcE3-aA';
+const map = new mapboxgl.Map({
+container: 'map', // container ID
+style: 'mapbox://styles/mapbox/streets-v11',  
+center:  [-71.060982,  42.35725],
+zoom: 18
+});
+  </SCRIPt>
+
+
+
+
+</body>
+
+</html>

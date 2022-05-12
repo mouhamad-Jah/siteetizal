@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="AR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=0.1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' 
+    rel='stylesheet' />
+     <link rel="stylesheet" 
+     href="style.css">
+ <title>مشروع التخرج</title>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar navbar-expand-lg navbar-dark py-0 fixed-top" style="background-color: #a5682a;">
+        <div class="container">
+        <a href="#" class=" bnt-1 navbar-brand" style="color: yellow; font-size: 30px;" >
+           <span  style="font-size: 40px; color:maroon; font-size:larger; font-weight: bold;">
+            اتصال  القاسمية   </span> </a>
+        <button class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navmenu"
+        >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <form class="btn-10 d-flex style" >
+      <input class=" form-control me-2" type="Recherche" style="text-align: right;" placeholder="ابحث" 
+      aria-label="Recherche">
+      <button class="btn btn-outline-success bg-warning bg-white" type="submit">البحث</button>
+    </form>
+        <div class="collapse navbar-collapse" style="margin-left: 1px;" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="btn-14 nav-item">
+                <a class="nav-link  text-dark bi bi-house text-dark mx-1" style="border-style: outset; border-color: white; font-size:large" 
+                data-bs-toggle="active" href="index.html" role="button" aria-expanded="false"></a>
+              </li>
+              <li class="btn-14 nav-item">
+                <a class="nav-link  text-dark bi bi-tv text-dark mx-1" style="border-style: outset; border-color: white; font-size:large" 
+                data-bs-toggle="active" href="tv.html" role="button" aria-expanded="false">TV</a>
+              </li>
+              <li class="btn-14 nav-item">
+                <a class="nav-link  text-dark bi bi-ui-radios text-dark mx-1" style="border-style: outset; border-color: white; font-size:large" 
+                data-bs-toggle="active" href="radio.html" role="button" aria-expanded="false">FM</a>
+              </li>
+              <li class="btn-15 nav-item dropdown">
+                <a class="nav-link  text-dark" style="border-style: outset; border-color: white; font-size:large" 
+                data-bs-toggle="drop" href="atelier.html" role="button" aria-expanded="false">الدورات </a>
+              </li> 
+                <li class="btn-14 nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle text-dark" style="border-style: outset; border-color: white; font-size:large" 
+                  data-bs-toggle="dropdown" href="activity.html" role="button" aria-expanded="false">الاخبار</a>
+                  <ul class="dropdown-menu" style="text-align: right;">
+                    <li><a class="dropdown-item" href="uninfo.html">اخبار الجامعة</a></li>
+                    <li><a class="dropdown-item" href="colleginf.html">اخبار الكلية</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                  </ul>
+                </li>
+                <li class=" btn-14 nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-dark" id="#" style="border-style: outset; border-color: white; font-size:large" 
+                  data-bs-toggle="dropdown" href="#activity.html" role="button" aria-expanded="false">الملتقى الاعلامي</a>
+                  <ul class="dropdown-menu" style="text-align: right;">
+                    <li><a class="dropdown-item" href="activity.html"> 2019 </a></li>
+                    <li><a class="dropdown-item" href="culture.html">2021 </a></li>
+                    <li><hr class="dropdown-divider"></li>
+                  </ul>
+                </li>
+                <li class="btn-14">
+                  <a class="nav-link  text-dark nav-link  text-dark bi bi-people text-dark mx-1" style="border-style: outset; border-color: white; font-size:large" 
+                  data-bs-toggle="active" href="about.html" role="button" aria-expanded="false"></a>
+                </li>
+            </ul>
+<button class="btn-2 nav-link   text-dark bi bi-box-arrow-in-right  mx-1" 
+style="border-style: outset; margin-left: 40px; margin-right: 1px;  border-color: white; font-size: larger;" data-bs-toggle="modal" 
+              data-bs-target="#INS"></button>
+        </div>
+        </div>
+    </nav>
+<div class="modal fade" id="INS" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-right">
+        <h5 class="modal-title text-right" style="text-align: right;" id="exampleModalLabel">التسجل</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="text-align: right;">
+          <p class="lead"> </p>
+          <form>
+              <div class="mb-3" style="text-align: right;">
+                  <label for="first-name" class="col-form-label">
+                   الاسم
+                  </label>
+                  <input type="text" class="form-control" id="first-name"
+                  >
+              </div>
+
+              <div class="mb-3 text-right">
+                  <label for="first-name" class="col-form-label" style="text-align: right;">
+                      اللقب
+                  </label>
+                  <input type="text" class="form-control" id="first-name"
+                  >
+              </div>
+              <div class="mb-3">
+                  <label for="first-name" class="col-form-label">
+                    <div style="text-align: right;"> الايميل</div>
+                  </label>
+                  <input type="text" class="form-control" id="first-name"
+                  >
+              </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            
+          اغلق
+
+        </button>
+        <button type="button" 
+        class="btn btn-primary">سجل</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<div class="container" style="background-color: #ffe0b2;">
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <div class="row">
+    <div class="col-md-8">
+
+
+      <div class="card mb-3" id="1235">
+        <a href="culture.html" style="text-decoration-color: black;text-decoration-line: none;"><h1 class="card-title " style="text-align: center;">
+          بمشاركة 18 جامعة عربية: الجامعة القاسمية تختتم فعاليات الملتقى الإعلامي الطلابي الثالث              <p><h6 style="text-align: right;">23/06/2021
+          </h6></p></h1></a>
+          <img src="img/moltaqa-event.png" class="card-img-top" alt="...." id="4455">
+          <figcaption style="text-align: center; font-style: normal;">
+        الملتقى الاعلامي الطلابي 
+          </figcaption>
+          <div class="card-body" style="text-align: right;">
+            
+            <p class="card-text">
+              <p class="card-text text-right" style="text-align: right;"><small class="text-muted text-right">  8:44:14| الناشر : محمد جاه جوب |  19/ مارس /2022م</small></p>
+              <hr>
+              <p class="card-text" style="text-align: right;">     نظمت الجامعة القاسمية أمس الملتقى الإعلامي الطلابي الثالث بعنوان " الإعلام الرقمي والمسؤولية المجتمعية " بمشاركة معالي الدكتور عمرو عزت سلامة أمين عام اتحاد الجامعات العربية وبحضور العديد من أساتذة وطلاب وطالبات كليات الإعلام من 18 جامعة إماراتية وعربية عبر تقنيات التواصل الافتراضي        <p>
+              <p>واستهدف الملتقي الوقوف على أهم التحديات التي تواجه تحمل المسؤولية المجتمعية للأفراد والمجتمعات في التعامل مع الإعلام الرقمي وإظهار الصورة الرائدة لدولة الإمارات كنموذج ناجح في تحمل مسؤولياتها المجتمعية أمام تحديات جائحة كورونا ورسم رؤى وآلية مستقبلية في كيفية إشاعة ثقافة مبدأ تطبيق المسؤولية المجتمعية بين الأفراد والمجتمعات في مختلف الظروف</p>
+                <img src="img/moltaqa-5.jpg" class="card-img-top" alt="....">
+                <figcaption style="text-align: center; font-style: normal;">أ.د. عواد الخلف مدير الجامعة القاسمية </figcaption>   
+                <p style="text-align: right;">
+                  وقال الأستاذ الدكتور عواد الخلف القائم بأعمال مدير الجامعة القاسمية في كلمته الافتتاحية إن نجاح الملتقى الإعلامي هو ترجمة حقيقية للدعم المتواصل الذي تحظى به الجامعة القاسمية من قبل صاحب السمو الشيخ الدكتور سلطان بن محمد القاسمي عضو المجلس الأعلى حاكم الشارقة رئيس الجامعة القاسمية ووفقا لتوجيهاته فقد أسهم الملتقى في نشر قيم المسؤولية الاجتماعية النبيلة وتعزيزها بين الأفراد والمجتمعات.. لافتا إلى أن مفهوم "المسؤولية المجتمعية" المتمثّل في أن يكون كل فرد في المجتمع مسؤولا عن تصرفاته تجاه هذا المجتمع بأكمله يبدو جديدًا إلا أنَّه مفهوم متجذّر في ثقافتنا العربيّة الإسلاميّة وديننا الحنيف                </p>   
+                
+                <p style="text-align: right;">
+                  وشهدت الجلسة الختامية إعلان نتائج مسابقة الملتقي الإعلامي لأفضل ورقة بحثية طلابية .. وفاز بالمركز الأول مناصفة.. كلية الإعلام جامعة اليرموك /الأردن/ عن بحث بعنوان: /العلاقة بين وسائل الأعلام الرقمية وتعزيز المهارات الفكرية لدى الطلبة الأردنيين في إطار المسؤولية الاجتماعية/ وكلية الاتصال الجامعة القاسمية /الإمارات/ عن بحث بعنوان: /الضوابط الأخلاقية لاستخدام شبكات وسائل التواصل الاجتماعي من وجهة نظر الشباب الجامعي بدولة الإمارات العربية المتحدة" دراسة ميدانية"/.                </p>
+            <p class="card-text" style="text-align: right;"><small class="text-muted">آخر تحديث  3 قائق</small></p>
+          </div>
+      </div>
+            <!--Fin Modifier Article-->
+    </div>
+    <div class="col-6 col-md-4" >
+          </li>
+        </ul>
+      </nav>
+      <div class="card" style="width: 20rem; height: 100rem;" id="carte-1">
+       <a href="activity.html" style="text-decoration-line: none; "> <div class="card-body" style="text-align:right;">
+          <h5 class="card-title" style="text-decoration-color: black;">
+            انطلاق «الملتقى الإعلامي الطلابي» بالجامعة القاسمية 25 الجاري ....... تعقد كلية الاتصال بالجامعة القاسمية يوم 25 ديسمبر الجاري «الملتقى الإعلامي الطلابي الثاني»، تحت شعار «ثقافات متعددة.. قلب واحد» لاستعراض دور الإعلام في بناء جسور الحوار بين الثقافات بمشاركة عدد من الجامعات في الدولة
+
+          </h5>
+          <p class="card-text">
+           </p></a>
+           <a href="activity.html" class="btn-10 btn-primary end-0">اقرأ المزيد</a>
+        </div>
+
+        <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <p class="btn-8 text-right" style="font-size:xx-large; background-color: #a5682a;">البوم الصور</p>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/00.png" class="d-block w-100" alt="">
+    
+            </div>
+            <div class="carousel-item">
+              <img src="img/atta0.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/صاحب.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+        <div class="card border-warning mb-3 " style="max-width: 25rem; max-height: 40rem;">
+          <div class="card-header bg-transparent border-warning text-right" style="text-align: center;"><h1>اتصال القاسمية</h1></div>
+          <div class="card-body text-dark">
+            <h5 class="card-title"  style="text-align: right;">فيديو : زيارة وفد كلية الاتصال للمؤسسات الإعلامية والاطلاع على البرامج التدريبية المقدمة للطلبة
+            </h5>
+            <div class="ratio ratio-16x9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/v1EvsOp9s-g" 
+              title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen></iframe>              </div>
+          </div>
+        </div>
+             
+      </div>
+      </div>
+    </div>
+  </div>
+</div> 
+<section class="p-5" style="background: #a5682a; ">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md">
+                <h2 class="text-center mb-4" style="text-align: center;" id="equipe">تواصل معنا</h2>
+              <ul class="list-group list-group-flush lead">
+                
+                  <li class="List-group-Item" >
+
+                    <a ><i class="bi bi-telephone text-dark mx-1">+971 544 78 24 34</i></a>
+                </li>
+                  <li class="List-group-Item">
+                    <a><i class="bi bi-telephone text-dark mx-1">+971 544 78 24 34</i></a>
+                </li>
+                  <li class="List-group-Item">
+                    <a ><i class="bi bi-telephone text-dark mx-1">+971 544 78 24 34</i></a>
+                  </li>
+                  <li class="List-group-Item">
+                    <a href="#"><i class="bi bi-envelope text-dark mx-1">mm8970dd@gmail.com</i></a> 
+                  </li>
+                  <li class="List-group-Item" id="">
+                    <a href="#"><i class="bi bi-envelope text-dark mx-1">mm8970dd@gmail.com</i></a> 
+                  </li> 
+                  <li class="List-group-Item" id="">
+                    <a ><i class="bi bi-geo-alt-fill text-dark mx-1" style="font-style: normal;"> الإمارات العربية المتحدة – الشارقة – مويلح – المدينة الجامعية</i></a> 
+                  </li>
+                  
+              </ul>
+            </div>
+
+            <div class="col-md">
+               <div id="map"> </div>
+               <li class="list-group-item">
+                <span class="fw-bold" style="text-align: center;">موقع الجامعة القاسمية</span> مويلح /المدينة الجامعية
+            </li>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5083.710010637612!2d55.462626883414664!3d25.29727393672443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f0e6f123a3d%3A0xdec6b7d5d4475bc1!2sAl%20Qasimia%20University!5e0!3m2!1sen!2sae!4v1649187574611!5m2!1sen!2sae"
+                width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- footer -->
+<footer class="p-3 bg-dark text-white text-center position-relative" >
+    <div class="container">
+        <p class="lead">copyright &copy; 2022 كلية الاتصال بالجامعة القاسمية</p>
+        <a href="#" class="position-absolute  bottom-0 end-0 p-5">
+            <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+    </div>
+</footer>
+
+<!-- Modal -->
+ <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Création d'article</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              
+            Fermer
+
+          </button>
+          <button type="button" 
+          class="btn btn-primary">Soumettre</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+      <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+      <SCRIPt>
+          mapboxgl.accessToken = 'pk.eyJ1IjoiamFoNDQiLCJhIjoiY2t5OWR3Z3hpMDVpdDJ2bWZ3bHhobXJkMiJ9.TkuO6DhEWWlCkTHTcE3-aA';
+const map = new mapboxgl.Map({
+container: 'map', // container ID
+style: 'mapbox://styles/mapbox/streets-v11',  
+center:  [-71.060982,  42.35725],
+zoom: 18
+});
+      </SCRIPt>
+</body>
+
+</html>
